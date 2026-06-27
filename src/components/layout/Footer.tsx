@@ -2,24 +2,24 @@ import { Zap, Twitter, Linkedin, Youtube, Send } from "lucide-react";
 
 const FOOTER_LINKS = {
   Products: [
-    { label: "Spot Trading", href: "https://www.arthbit.com/trade" },
-    { label: "Instant Buy", href: "https://www.arthbit.com/instant/buy-btc/inr" },
-    { label: "Staking", href: "https://www.arthbit.com/staking" },
-    { label: "IEO", href: "https://www.arthbit.com/ieo" },
-    { label: "Markets", href: "https://www.arthbit.com/markets" },
+    { label: "Spot Trading", href: "/signup" },
+    { label: "Instant Buy", href: "/signup" },
+    { label: "Staking", href: "#features" },
+    { label: "IEO", href: "/signup" },
+    { label: "Markets", href: "#markets" },
   ],
   Company: [
-    { label: "About Us", href: "https://www.arthbit.com/about-us" },
-    { label: "Fees", href: "https://www.arthbit.com/fees" },
-    { label: "Referral Program", href: "https://www.arthbit.com/referral" },
-    { label: "Rewards", href: "https://www.arthbit.com/reward" },
-    { label: "Contact Us", href: "https://www.arthbit.com/contact-us" },
+    { label: "About Us", href: "#features" },
+    { label: "Fees", href: "#faq" },
+    { label: "Referral Program", href: "/signup" },
+    { label: "Rewards", href: "#features" },
+    { label: "Contact Us", href: "/login" },
   ],
   Support: [
-    { label: "Help Center", href: "https://support.arthbit.com" },
-    { label: "Security", href: "https://support.arthbit.com" },
-    { label: "KYC Guide", href: "https://support.arthbit.com" },
-    { label: "INR Deposit & Withdrawal", href: "https://support.arthbit.com" },
+    { label: "Help Center", href: "/login" },
+    { label: "Security", href: "#security" },
+    { label: "KYC Guide", href: "#faq" },
+    { label: "INR Deposit & Withdrawal", href: "#faq" },
     { label: "Bug Bounty", href: "#" },
   ],
 };

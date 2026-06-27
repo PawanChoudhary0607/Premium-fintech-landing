@@ -103,9 +103,7 @@ export function FAQSection() {
               Visit the help center or contact the support team for account-specific guidance.
             </p>
             <a
-              href="https://support.arthbit.com"
-              target="_blank"
-              rel="noopener noreferrer"
+              href="/login"
               className="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-brand-blue-light transition-colors hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-blue-light focus-visible:ring-offset-2 focus-visible:ring-offset-bg-base"
             >
               Visit Help Center

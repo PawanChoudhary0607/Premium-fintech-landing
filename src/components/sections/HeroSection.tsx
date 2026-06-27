@@ -21,7 +21,7 @@ import { Button } from "@/components/ui/Button";
 import { Badge } from "@/components/ui/Badge";
 import { cn } from "@/lib/utils";
 
-const TRADE_URL = "https://www.arthbit.com/trade";
+const SIGNUP_URL = "/signup";
 const easeOut = [0.22, 1, 0.36, 1] as const;
 
 const fadeUp = {
@@ -536,7 +536,9 @@ export function HeroSection() {
               <Button
                 size="lg"
                 className="rounded-full px-9 h-[3.625rem] text-[15px] font-semibold tracking-[-0.01em] shadow-[0_12px_40px_rgba(59,91,255,0.35),inset_0_1px_0_rgba(255,255,255,0.12)] hover:shadow-[0_16px_48px_rgba(123,63,228,0.38)] hover:scale-[1.015] active:scale-[0.99] transition-all duration-300"
-                onClick={() => window.open(TRADE_URL, "_blank")}
+                onClick={() => {
+                  window.location.href = SIGNUP_URL;
+                }}
               >
                 Start Trading Free
                 <ArrowRight size={17} strokeWidth={2.5} />

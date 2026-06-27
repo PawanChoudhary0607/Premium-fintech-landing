@@ -187,9 +187,7 @@ export function AppSection() {
               4.8/5 rating
             </span>
             <a
-              href="https://support.arthbit.com"
-              target="_blank"
-              rel="noopener noreferrer"
+              href="/login"
               className="font-semibold text-brand-blue-light transition-colors hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-blue-light focus-visible:ring-offset-2 focus-visible:ring-offset-bg-base"
             >
               Contact support

@@ -6,8 +6,8 @@ import { Section, SectionHeader } from "@/components/ui/Section";
 import { Button } from "@/components/ui/Button";
 import { cn } from "@/lib/utils";
 
-const TRADE_BASE = "https://www.arthbit.com/trade";
-const MARKETS_URL = "https://www.arthbit.com/markets";
+const SIGNUP_URL = "/signup";
+const MARKETS_URL = "#markets";
 const easeOut = [0.22, 1, 0.36, 1] as const;
 
 const COINS = [
@@ -108,7 +108,7 @@ function MarketRow({
 
       <div className="text-right">
         <a
-          href={`${TRADE_BASE}/${coin.symbol}-INR`}
+          href={SIGNUP_URL}
           className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-brand-blue-light text-sm font-semibold hero-glass-subtle border-white/[0.06] hover:border-brand-blue/30 hover:text-white transition-all duration-300 group-hover:shadow-[0_4px_20px_rgba(59,91,255,0.15)]"
         >
           Trade
@@ -166,7 +166,7 @@ function MarketCard({
       </div>
 
       <a
-        href={`${TRADE_BASE}/${coin.symbol}-INR`}
+        href={SIGNUP_URL}
         className="mt-4 flex items-center justify-center gap-2 w-full py-2.5 rounded-xl text-sm font-semibold text-brand-blue-light hero-glass border-white/[0.06] hover:border-brand-blue/25 transition-all duration-300"
       >
         Trade {coin.symbol}
@@ -229,7 +229,9 @@ export function MarketsSection() {
               variant="outline"
               size="md"
               className="rounded-full px-6 hero-glass-subtle border-white/[0.08] hover:border-brand-blue/35 hover:bg-white/[0.04] transition-all duration-300"
-              onClick={() => window.open(MARKETS_URL, "_blank")}
+              onClick={() => {
+                window.location.href = MARKETS_URL;
+              }}
             >
               View all markets
               <ArrowRight size={16} strokeWidth={2.5} />
@@ -280,7 +282,9 @@ export function MarketsSection() {
           variant="outline"
           size="md"
           className="rounded-full px-7 hero-glass-subtle border-white/[0.08]"
-          onClick={() => window.open(MARKETS_URL, "_blank")}
+          onClick={() => {
+            window.location.href = MARKETS_URL;
+          }}
         >
           View all markets
           <ArrowRight size={16} strokeWidth={2.5} />

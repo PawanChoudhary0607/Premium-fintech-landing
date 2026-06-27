@@ -1,6 +1,7 @@
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { HeroSection } from "@/components/sections/HeroSection";
+import { CurrencyConverter } from "@/components/sections/CurrencyConverter";
 import { Ticker } from "@/components/sections/Ticker";
 import { MarketsSection } from "@/components/sections/MarketsSection";
 import { FeaturesSection } from "@/components/sections/FeaturesSection";
@@ -17,6 +18,7 @@ export default function Home() {
       <Navbar />
       <main>
         <HeroSection />
+        <CurrencyConverter />
         <Ticker />
         <MarketsSection />
         <FeaturesSection />

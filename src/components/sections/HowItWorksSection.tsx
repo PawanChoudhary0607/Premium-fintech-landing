@@ -148,7 +148,7 @@ export function HowItWorksSection() {
           </div>
 
           <motion.a
-            href="https://www.arthbit.com/trade"
+            href="/signup"
             initial={{ opacity: 0, y: 14 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}

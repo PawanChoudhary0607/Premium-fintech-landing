@@ -42,7 +42,7 @@ export function CTASection() {
               <motion.a
                 whileHover={{ scale: 1.03 }}
                 whileTap={{ scale: 0.98 }}
-                href="#"
+                href="/signup"
                 className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-blue-500 to-violet-500 px-8 py-4 font-semibold text-white shadow-2xl shadow-blue-500/30"
               >
                 Get Started

@@ -8,7 +8,8 @@ import { useScrolled } from "@/hooks/useScrolled";
 import { NAV_LINKS } from "@/lib/data";
 import { cn } from "@/lib/utils";
 
-const TRADE_URL = "https://www.arthbit.com/trade";
+const LOGIN_URL = "/login";
+const SIGNUP_URL = "/signup";
 
 const easeOut = [0.22, 1, 0.36, 1] as const;
 
@@ -112,9 +113,7 @@ export function Navbar() {
             {/* Desktop CTA */}
             <div className="hidden md:flex items-center gap-2 lg:gap-3 shrink-0">
               <motion.a
-                href={TRADE_URL}
-                target="_blank"
-                rel="noopener noreferrer"
+                href={LOGIN_URL}
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: 0.35, duration: 0.4 }}
@@ -130,7 +129,9 @@ export function Navbar() {
                 <Button
                   size="sm"
                   className="rounded-full px-5 shadow-[0_4px_24px_rgba(59,91,255,0.35)] hover:shadow-[0_6px_32px_rgba(123,63,228,0.4)]"
-                  onClick={() => window.open(TRADE_URL, "_blank")}
+                  onClick={() => {
+                    window.location.href = SIGNUP_URL;
+                  }}
                 >
                   Get Started
                 </Button>
@@ -196,7 +197,7 @@ export function Navbar() {
                     className="rounded-xl"
                     onClick={() => {
                       setMobileOpen(false);
-                      window.open(TRADE_URL, "_blank");
+                      window.location.href = LOGIN_URL;
                     }}
                   >
                     Log in
@@ -206,7 +207,7 @@ export function Navbar() {
                     className="rounded-xl shadow-[0_4px_24px_rgba(59,91,255,0.3)]"
                     onClick={() => {
                       setMobileOpen(false);
-                      window.open(TRADE_URL, "_blank");
+                      window.location.href = SIGNUP_URL;
                     }}
                   >
                     Get Started Free
