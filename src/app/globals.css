@@ -1,0 +1,214 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    background-color: #080B14;
+    color: #F0F4FF;
+    font-family: "Inter", system-ui, sans-serif;
+    overflow-x: hidden;
+  }
+
+  ::selection {
+    background: rgba(59, 91, 255, 0.35);
+    color: #F0F4FF;
+  }
+
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #080B14;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #1E2A4A;
+    border-radius: 3px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #3B5BFF;
+  }
+}
+
+@layer utilities {
+  .text-gradient {
+    background: linear-gradient(135deg, #3B5BFF 0%, #7B3FE4 60%, #00E5FF 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .text-gradient-subtle {
+    background: linear-gradient(135deg, #6B84FF 0%, #A06BE8 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .border-gradient {
+    border: 1px solid transparent;
+    background: linear-gradient(#0F1629, #0F1629) padding-box,
+      linear-gradient(135deg, rgba(59,91,255,0.5), rgba(123,63,228,0.3)) border-box;
+  }
+
+  .glow-orb {
+    background: radial-gradient(ellipse at center, rgba(59,91,255,0.6) 0%, rgba(123,63,228,0.4) 40%, transparent 70%);
+    filter: blur(60px);
+  }
+
+  .card-glass {
+    background: linear-gradient(145deg, rgba(59,91,255,0.08) 0%, rgba(123,63,228,0.04) 100%);
+    border: 1px solid rgba(255,255,255,0.06);
+    backdrop-filter: blur(8px);
+  }
+
+  .ticker-container {
+    -webkit-mask-image: linear-gradient(90deg, transparent, black 8%, black 92%, transparent);
+    mask-image: linear-gradient(90deg, transparent, black 8%, black 92%, transparent);
+  }
+
+  .phone-shadow {
+    filter: drop-shadow(0 50px 100px rgba(8, 11, 20, 0.85))
+      drop-shadow(0 28px 56px rgba(59, 91, 255, 0.28))
+      drop-shadow(0 0 80px rgba(123, 63, 228, 0.14));
+  }
+
+  .phone-floor-shadow {
+    background: radial-gradient(
+      ellipse 72% 100% at 50% 50%,
+      rgba(59, 91, 255, 0.22) 0%,
+      rgba(123, 63, 228, 0.08) 35%,
+      transparent 72%
+    );
+    filter: blur(18px);
+  }
+
+  .text-gradient-hero {
+    background: linear-gradient(
+      118deg,
+      #8fa4ff 0%,
+      #3b5bff 28%,
+      #9b6bff 62%,
+      #5ce4ff 100%
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .hero-glass {
+    background: linear-gradient(
+      155deg,
+      rgba(255, 255, 255, 0.09) 0%,
+      rgba(255, 255, 255, 0.025) 42%,
+      rgba(59, 91, 255, 0.035) 100%
+    );
+    border: 1px solid rgba(255, 255, 255, 0.09);
+    backdrop-filter: blur(20px) saturate(1.45);
+    -webkit-backdrop-filter: blur(20px) saturate(1.45);
+    box-shadow:
+      0 4px 6px rgba(0, 0, 0, 0.12),
+      0 16px 48px rgba(0, 0, 0, 0.32),
+      inset 0 1px 0 rgba(255, 255, 255, 0.1),
+      inset 0 -1px 0 rgba(255, 255, 255, 0.02);
+  }
+
+  .hero-glass-subtle {
+    background: linear-gradient(
+      160deg,
+      rgba(255, 255, 255, 0.05) 0%,
+      rgba(255, 255, 255, 0.015) 100%
+    );
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    box-shadow:
+      0 8px 32px rgba(0, 0, 0, 0.28),
+      inset 0 1px 0 rgba(255, 255, 255, 0.06);
+  }
+
+  .hero-spotlight {
+    background:
+      radial-gradient(
+        ellipse 55% 48% at 18% 22%,
+        rgba(59, 91, 255, 0.09) 0%,
+        transparent 68%
+      ),
+      radial-gradient(
+        ellipse 62% 52% at 78% 28%,
+        rgba(123, 63, 228, 0.11) 0%,
+        rgba(59, 91, 255, 0.04) 38%,
+        transparent 72%
+      );
+  }
+
+  .hero-vignette {
+    background: radial-gradient(
+      ellipse 88% 74% at 50% 46%,
+      transparent 22%,
+      rgba(8, 11, 20, 0.42) 100%
+    );
+  }
+
+  .hero-horizon {
+    background: linear-gradient(
+      180deg,
+      transparent 0%,
+      rgba(59, 91, 255, 0.04) 72%,
+      rgba(8, 11, 20, 0.85) 100%
+    );
+  }
+
+  .phone-shell {
+    background: linear-gradient(
+      165deg,
+      #3d4668 0%,
+      #222a42 18%,
+      #141b2e 52%,
+      #0c101c 100%
+    );
+    box-shadow:
+      inset 0 1px 0 rgba(255, 255, 255, 0.14),
+      inset 0 -1px 0 rgba(0, 0, 0, 0.45),
+      0 0 0 1px rgba(255, 255, 255, 0.06);
+  }
+
+  .phone-screen-shine {
+    background: linear-gradient(
+      125deg,
+      rgba(255, 255, 255, 0.09) 0%,
+      rgba(255, 255, 255, 0.02) 22%,
+      transparent 48%
+    );
+  }
+
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .nav-glass {
+    background: linear-gradient(
+      135deg,
+      rgba(15, 22, 41, 0.82) 0%,
+      rgba(8, 11, 20, 0.72) 100%
+    );
+    backdrop-filter: blur(20px) saturate(1.4);
+    -webkit-backdrop-filter: blur(20px) saturate(1.4);
+  }
+}
